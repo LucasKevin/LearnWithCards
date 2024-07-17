@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+    --primary-color: #4CAF50; /* Verde para o tema principal */
+    --accent-color: #FFC107; /* Amarelo como cor de destaque */
+    --background-color: #f5f5f5; /* Cor de fundo geral */
+    --text-color: #333; /* Cor principal de texto */
+    --primary-color-dark: #388E3C; /* Verde escuro */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+input[type="text"] {
+    font-size: 1.2em;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+}
+
+button {
+    font-size: 1.2em;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+#resultado {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#resultado p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#resultado .word {
+    font-weight: bold;
+    color: var(--primary-color-dark);
+}
+
+#resultado .translation {
+    color: #333;
+}
+
+#resultado .examples {
+    color: #666;
+    font-style: italic;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.card:hover {
+    background-color: #f9f9f9;
+}
+
+.card p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.card .translation {
+    display: none;
+}
+
+.card .examples {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.card button {
+    font-size: 1em;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.word-list {
+    margin-top: 30px;
+}
+
+.word-item {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.word-item:hover {
+    background-color: #f0f0f0;
+}
+
+.word-detail {
+    background-color: #e8f5e9; /* Verde claro para detalhes */
+    padding: 12px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.word-detail p {
+    margin-bottom: 6px;
+    font-size: 1.1em;
+}
+
+.stored-words-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.stored-word-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.stored-word-item p {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.stored-word-item button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.stored-word-item button:hover {
+    background-color: #d32f2f;
+}
+
+.revealed {
+    background-color: #e8f5e9; /* Cor de fundo quando revelado */
+}
+
+.revealed > div {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #dcedc8; /* Cor de fundo do detalhe revelado */
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+}
+
+/* Estilos para os botões */
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.button-container button {
+    margin-right: 10px;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+
